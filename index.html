@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" class="bg-neutral">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="./assets_image/indian_flag.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="src/css/style.css">
+  <link rel="stylesheet" type="text/css" href="dist/output.css">
+  <title>Welcome</title>
+</head>
+
+<body class="bg-neutral">
+  <header>
+    <div class="navbar bg-neutral fixed">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-box w-52">
+            <li><a href="./menu.html" class="hover:text-primary hover:bg-neutral">Menu</a></li>
+            <li><a href="./gallery.html" class="hover:text-primary hover:bg-neutral">Gallery</a></li>
+            <li><a href="./about_us.html" class="hover:text-primary hover:bg-neutral">About us</a></li>
+            <li><a href="./contact.html" class="hover:text-primary hover:bg-neutral">Contact</a></li>
+          </ul>
+        </div>
+        <a href="./index.html" class="btn btn-ghost normal-case text-xl text-primary hover:bg-neutral hover:link">Curry Madras</a>
+      </div>
+      <div class="navbar-center hidden md:flex">
+        <ul class="menu menu-horizontal px-1 font-semibold text-base">
+          <li><a href="./menu.html" class="hover:text-primary hover:bg-neutral">Menu</a></li>
+          <li><a href="./gallery.html" class="hover:text-primary hover:bg-neutral">Gallery</a></li>
+          <li><a href="./about_us.html" class="hover:text-primary hover:bg-neutral">About us</a></li>
+          <li><a href="./contact.html" class="hover:text-primary hover:bg-neutral">Contact</a></li>
+        </ul>
+      </div>
+      <div class="hidden md:flex navbar-end text-primary pr-5 text-xl font-bold"></div>
+    </div>
+  </header>
+  <main>
+    <section class="w-screen bg-center bg-no-repeat bg-cover bg-[url('https://media.istockphoto.com/id/177043240/fr/photo/curry-de-poulet-au-beurre-indien.jpg?s=1024x1024&w=is&k=20&c=B6_3Sm0TDgRGVhJeJ2n-Zbex-fBRn4IysAT0cI-Ez1M=')] bg-gray-700 bg-blend-multiply">
+      <div class="px-4 mx-auto max-w-screen-xl text-center py-24 md:py-56">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl">Curry Madras</h1>
+        <p class="mb-8 text-lg font-normal text-secondary md:px-16">Here at <span class="text-primary">Curry
+            Madras</span> we will make you feel like you are in India</p>
+        <div class="flex flex-col space-y-4 md:flex-row md:justify-center md:space-y-0 md:space-x-4">
+          <a href="./menu.html" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-accent hover:bg-primary focus:ring-4 focus:ring-orange-800">
+            Menu
+          </a>
+          <a href="./contact.html" class="btn bg-primary text-white hover:bg-accent">
+            Contact us
+            <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="md:flex">
+      <section class="md:w-8/12 text-white">
+        <h1 class="text-center text-4xl border border-primary bg-warning p-2">Promotions</h1>
+        <div class="flex">
+          <div class="w-6/12 text-2xl border-r border-neutral text-center flex flex-col items-center bg-neutral pt-3">
+            <h2><span class="text-primary font-bold">Orange</span> Wednesday :</h2><br>Pay one, get two portions of
+            <span class="text-warning"><br><b>Tikka masala Chicken</b></span>
+            <img src="https://www.recipetineats.com/wp-content/uploads/2018/04/Chicken-Tikka-Masala_0-SQ.jpg" label="chicken_tikkamassala" id="welcome_chicken_tikkamasala" class="pt-3">
+          </div>
+          <div class="w-6/12 text-2xl text-center flex flex-col items-center pt-3 bg-primary">
+            <h2><span class="text-warning font-bold">Red</span> Saturday :</h2><br>All you can eat <span class="text-warning font-bold"><br>Tandoori buffet</span>
+            <img src="https://img.taste.com.au/WXjd5s9Y/taste/2016/11/tandoori-lamb-with-rice-salad-33005-1.jpeg" label="tandoori_buffet" id="welcome_tandoori" class="pt-3">
+          </div>
+        </div>
+      </section>
+      <section class="md:w-4/12 bg-neutral text-white bordel bordel-l border-neutral">
+        <h1 class="text-center text-4xl border-y border-primary bg-warning p-2">Upcoming Events</h1>
+        <h2 class="text-center text-3xl pt-5 underline">Indian cooking classes</h2>
+        <div class="text-center text-lg justify-center items-center pt-5 px-5">Join us at Curry Madras for a delightful
+          journey into the vibrant world of Indian cooking. Experience the rich flavors and aromatic spices that make
+          every bite an unforgettable adventure!
+          <br><br>
+          <div class="md:pt-5"><span class="text-base">Everyone in the family is welcome. Please <a class="link" href="./contact.html">contact us</a> to register</span></div>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>

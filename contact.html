@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" class="bg-neutral">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="./assets_image/indian_flag.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="src/css/style.css">
+  <link rel="stylesheet" type="text/css" href="dist/output.css">
+  <title>Contact</title>
+</head>
+
+<body>
+  <header>
+    <div class="navbar bg-primary fixed">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost md:hidden text-neutral">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-sm text-neutral dropdown-content mt-3 z-[1] p-2 shadow bg-primary rounded-box w-52">
+            <li><a href="./menu.html" class="hover:bg-primary">Menu</a></li>
+            <li><a href="./gallery.html" class="hover:bg-primary">Gallery</a></li>
+            <li><a href="./about_us.html" class="hover:bg-primary">About us</a></li>
+          </ul>
+        </div>
+        <a href="./index.html" class="btn btn-ghost normal-case text-xl text-neutral hover:bg-primary hover:text-white">Curry Madras</a>
+      </div>
+      <div class="navbar-center hidden md:flex">
+        <ul class="menu menu-horizontal px-1 text-base text-neutral font-semibold">
+          <li><a href="./menu.html" class="hover:bg-primary">Menu</a></li>
+          <li><a href="./gallery.html" class="hover:bg-primary">Gallery</a></li>
+          <li><a href="./about_us.html" class="hover:bg-primary">About us</a></li>
+        </ul>
+      </div>
+      <div class="text-neutral hidden md:flex navbar-end pr-5 text-xl font-bold"></div>
+    </div>
+  </header>
+  <main>
+    <h1 class="text-primary text-center pt-24 text-4xl font-semibold">Contact us</h1>
+    <form action="./src/PHP/insert_message.php" method="post" class="form-control space-y-4 pt-6 text-center">
+      <div>
+        <label for="first_name">First name :</label><br>
+        <input id="first_name" name="first_name" placeholder="Enter your First Name" class="input input-primary bg-neutral w-full max-w-xs" title="first_name" type="text">
+      </div>
+      <div>
+        <label for="last_name">Last name :</label><br>
+        <input id="last_name" name="last_name" placeholder="Enter your Last Name" class="input input-primary bg-neutral w-full max-w-xs" title="last_name" type="text">
+      </div>
+      <div>
+        <label for="email_address">Email :</label><br>
+        <input id="email_address" name="email" placeholder="Enter your Email address" class="input input-primary bg-neutral w-full max-w-xs" title="email" type="email">
+      </div>
+      <div>
+        <label for="subject_message">Subject of the Message :</label><br>
+        <select placeholder="Choose the subject of your message" name="subject" id="subject_message" class="select select-primary select-bordered bg-neutral w-full max-w-xs" title="message_subject">
+          <option value="" disabled selected>Please choose one of the options</option>
+          <option value="reservation">Reservation</option>
+          <option value="order">Order</option>
+          <option value="complain">Complain</option>
+          <option value="cooking_classe">Book Cooking Classe(s)</option>
+        </select>
+      </div>
+      <div>
+        <label for="message" class="flex-start">Message :</label><br>
+        <textarea id="message" placeholder="Enter your message" name="message" class="textarea textarea-primary textarea-bordered bg-neutral w-full max-w-xs" rows="4" title="message"></textarea>
+      </div>
+      <div>
+        <button class="btn bg-neutral border border-primary-focus hover:bg-primary hover:text-neutral" type="submit">
+          Send
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+            <style>svg{fill:#ffffff}</style>
+            <path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+        </button>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>

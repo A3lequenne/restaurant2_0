@@ -1,0 +1,40 @@
+@import '../../node_modules/tailwindcss/base';
+@import '../../node_modules/tailwindcss/components';
+@import '../../node_modules/tailwindcss/utilities';
+
+
+
+#welcome_chicken_tikkamasala {
+    height: auto;
+    width: 150px;
+}
+
+#welcome_tandoori {
+    height: auto;
+    width: 200px;
+}
+
+.little_dots {
+    list-style-type: none;
+}
+
+.little_dots li::before {
+    content: "\2022";
+    color: #ea580c;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.resize_gallery {
+    width: 25%;
+}
+
+.about_us_main {
+    padding-top: 5.5rem;
+}
+
+@media (max-width: 767px){
+    #carte_resto {
+        width: 100%;
+    }
+}

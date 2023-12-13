@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" class="bg-neutral">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="./assets_image/indian_flag.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="src/css/style.css">
+  <link rel="stylesheet" type="text/css" href="dist/output.css">
+  <title>Gallery</title>
+</head>
+
+<body>
+  <header>
+    <div class="navbar bg-primary fixed">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost md:hidden text-neutral">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-sm text-neutral dropdown-content mt-3 z-[1] p-2 shadow bg-primary rounded-box w-52">
+            <li><a href="./menu.html" class="hover:bg-primary">Menu</a></li>
+            <li><a href="./about_us.html" class="hover:bg-primary">About us</a></li>
+            <li><a href="./contact.html" class="hover:bg-primary">Contact</a></li>
+          </ul>
+        </div>
+        <a href="./index.html" class="btn btn-ghost normal-case text-xl text-neutral hover:bg-primary hover:text-white">Curry Madras</a>
+      </div>
+      <div class="navbar-center hidden md:flex">
+        <ul class="menu menu-horizontal px-1 text-base text-neutral font-semibold">
+          <li><a href="./menu.html" class="hover:bg-primary">Menu</a></li>
+          <li><a href="./about_us.html" class="hover:bg-primary">About us</a></li>
+          <li><a href="./contact.html" class="hover:bg-primary">Contact</a></li>
+        </ul>
+      </div>
+      <div class="text-neutral hidden md:flex navbar-end pr-5 text-xl font-bold"></div>
+    </div>
+  </header>
+  <main>
+    <div class="flex justify-center">
+      <div class="gallery resize_gallery pt-36">
+      </div>
+    </div>
+    <div class="pagination text-center text-xl pt-4">
+      <button id="prevPage" class="hover:link">Previous</button>
+      <span id="currentPage" class="text-primary font-semibold text-2xl">1</span>
+      <button id="nextPage" class="hover:link">Next</button>
+    </div>
+  
+    <script>
+      const images = [
+        './assets_image/cm_image_3.jpg', './assets_image/cm_image_4.jpg', './assets_image/cm_image_5.jpg', './assets_image/cm_image_7.jpg', './assets_image/cm_image_0.jpg', './assets_image/cm_image_1.jpg', './assets_image/cm_image_2.jpg', './assets_image/cm_image_8.jpg', './assets_image/cm_image_9.jpg', './assets_image/cm_image_10.jpg'
+      ];
+  
+      const gallery = document.querySelector('.gallery');
+      const prevButton = document.getElementById('prevPage');
+      const nextButton = document.getElementById('nextPage');
+      const currentPageSpan = document.getElementById('currentPage');
+      const imagesPerPageFirstPage = 4;
+      const imagesPerPageSubsequentPages = 3;
+      let currentPage = 1;
+  
+      function displayImages() {
+        const startIndex = (currentPage === 1) ? 0 : (currentPage - 2) * imagesPerPageSubsequentPages + imagesPerPageFirstPage;
+        const endIndex = (currentPage === 1) ? imagesPerPageFirstPage : startIndex + imagesPerPageSubsequentPages;
+        const pageImages = images.slice(startIndex, endIndex);
+  
+        gallery.innerHTML = '';
+  
+        pageImages.forEach((imageSrc) => {
+          const img = document.createElement('img');
+          img.src = imageSrc;
+          gallery.appendChild(img);
+        });
+  
+        currentPageSpan.textContent = currentPage;
+      }
+  
+      prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+          currentPage--;
+          displayImages();
+        }
+      });
+  
+      nextButton.addEventListener('click', () => {
+        const maxPages = Math.ceil(images.length / imagesPerPageSubsequentPages);
+        if (currentPage < 3) {
+          currentPage++;
+          displayImages();
+        }
+      });
+  
+      displayImages();
+    </script>
+  </main>
+</body>
+
+</html>
